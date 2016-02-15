@@ -49,7 +49,7 @@ public class BackupActivity extends BaseActivity {
             boolean exportSecret = intent.getBooleanExtra(EXTRA_SECRET, false);
             long[] masterKeyIds = intent.getLongArrayExtra(EXTRA_MASTER_KEY_IDS);
 
-            Fragment frag = BackupCodeFragment.newInstance(masterKeyIds, exportSecret);
+            Fragment frag = BackupCodeFragment.newInstance(masterKeyIds, exportSecret, false);
 
             FragmentManager fragMan = getSupportFragmentManager();
             fragMan.beginTransaction()
